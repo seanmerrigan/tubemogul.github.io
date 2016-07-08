@@ -1,0 +1,74 @@
+---
+layout: default
+---
+
+<div class="home">
+
+
+  {% if site.posts.size != 0 %}
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  <!--
+  <h1 class="page-heading">Posts available on our engineering blog</h1>
+  <script src="/js/embed_eng_posts.js"></script>
+  <ul class="post-list" id="eng_blog_list">
+  </ul>
+  -->
+
+  <h1 class="page-heading">Want to learn more about us?</h1>
+
+  <p>
+  Follow us on social medias:
+
+    <ul class="social-media-list">
+      {% if site.github_username %}
+      <li>
+        {% include icon-github.html username=site.github_username %}
+      </li>
+      {% endif %}
+
+      {% if site.twitter_username %}
+      <li>
+        {% include icon-twitter.html username=site.twitter_username %}
+      </li>
+      {% endif %}
+
+      {% if site.facebook_username %}
+      <li>
+        {% include icon-facebook.html username=site.facebook_username %}
+      </li>
+      {% endif %}
+      <li>
+        {% include icon-linkedin-company.html companyname="tubemogul-inc-" nametodisplay="TubeMogul, Inc." %}
+      </li>
+    </ul>
+
+  </p>
+
+  <p>
+    Also check out <a href="https://www.tubemogul.com/">our website</a> and learn more about our
+    <a href="https://www.tubemogul.com/guiding-principles/">guiding principles</a>.
+  </p>
+
+  <p>
+     Interested in working with us? Check out our exciting <a href="https://www.tubemogul.com/opportunities/">open positions</a>!
+  </p>
+
+  <p>
+     Want to read more about what our Engineering team does?
+     <br /><b><a href="https://www.tubemogul.com/engineering/">Check out our Engineering blog!</a></b>
+  </p>
+</div>

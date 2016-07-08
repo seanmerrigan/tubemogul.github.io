@@ -1,0 +1,25 @@
+# Site settings
+title: TubeMogul's Github page
+email: contact@tubemogul.com
+description: >
+  TubeMogul is the leading independent software platform
+  that enables brands and agencies to plan, buy, measure
+  and optimize their global advertising.
+baseurl: ""
+url: "http://tubemogul.github.io" # the base hostname & protocol for your site
+twitter_username: TubeMogul
+facebook_username: TubeMogul
+github_username:  tubemogul
+
+# Build settings
+markdown: kramdown
+
+github: [metadata]
+kramdown:
+  input: GFM
+  hard_wrap: false
+gems:
+  - jekyll-coffeescript
+  - jekyll-sitemap
+  - jemoji
+  - jekyll-mentions
